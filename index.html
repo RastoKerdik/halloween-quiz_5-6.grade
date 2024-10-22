@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween Quiz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d;
+            color: #ff7518;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+            color: #d1430b;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .quiz-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #262626;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+        }
+
+        .question-column {
+            width: 30%;
+        }
+
+        .question {
+            background-color: #1a1a1a;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid #d15909f2;
+            transition: background-color 0.3s ease;
+        }
+
+        .question:hover {
+            background-color: #333;
+        }
+
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+            opacity: 0;
+            padding: 0 15px;
+            margin-top: 5px;
+            background-color: #333;
+            border-radius: 8px;
+            color: #f8b203;
+        }
+
+        .answer.open {
+            max-height: 100px;
+            opacity: 1;
+            padding: 10px 15px;
+        }
+
+        /* Color gradient effect for the background */
+        body {
+            background: linear-gradient(to bottom right, #ff7518, #d1430b, #0d0d0d);
+            animation: gradient 5s infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Halloween</h1>
+
+    <div class="quiz-container">
+        <!-- Left Column (History) -->
+        <div class="question-column">
+            <h2>History</h2>
+
+            <div class="question" onclick="toggleAnswer(0)">
+                1. What is the origin of Halloween?
+                <div class="answer">Halloween originated from the ancient Celtic festival of Samhain.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(1)">
+                2. Why do people carve pumpkins on Halloween?
+                <div class="answer">Carving pumpkins comes from the Irish legend of Jack O'Lantern.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(2)">
+                3. Where does the word "Halloween" come from?
+                <div class="answer">The word "Halloween" comes from "All Hallows' Eve", the night before All Saints' Day.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(3)">
+                4. How was Halloween introduced to the United States?
+                <div class="answer">Irish and Scottish immigrants brought Halloween to the U.S. in the 19th century.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(4)">
+                5. What was the original purpose of Halloween costumes?
+                <div class="answer">Costumes were used to disguise people from evil spirits during Samhain.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(5)">
+                6. Why is Halloween celebrated on October 31st?
+                <div class="answer">Halloween is on October 31st because of its association with the Celtic festival of Samhain.</div>
+            </div>
+        </div>
+
+        <!-- Middle Column (Traditions) -->
+        <div class="question-column">
+            <h2>Traditions</h2>
+
+            <div class="question" onclick="toggleAnswer(6)">
+                7. What does trick-or-treating mean?
+                <div class="answer">Trick-or-treating is when children ask for candy, promising not to play tricks in return.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(7)">
+                8. Why do people wear masks on Halloween?
+                <div class="answer">Masks were worn to protect from evil spirits during ancient celebrations.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(8)">
+                9. What do bonfires symbolize during Halloween?
+                <div class="answer">Bonfires were lit to protect people from spirits and to celebrate Samhain.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(9)">
+                10. How is Halloween celebrated in the U.S.?
+                <div class="answer">In the U.S., Halloween is celebrated with trick-or-treating, costumes, and parties.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(10)">
+                11. What is the meaning of orange and black during Halloween?
+                <div class="answer">Orange represents harvest, and black symbolizes death and darkness.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(11)">
+                12. What is the origin of "trick-or-treat"?
+                <div class="answer">"Trick-or-treat" has roots in medieval traditions of asking for food in exchange for prayers.</div>
+            </div>
+        </div>
+
+        <!-- Right Column (Other Facts) -->
+        <div class="question-column">
+            <h2>Other Facts</h2>
+
+            <div class="question" onclick="toggleAnswer(12)">
+                13. What are the most popular Halloween characters?
+                <div class="answer">Popular characters include witches, ghosts, zombies, and vampires.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(13)">
+                14. What are some famous Halloween movies?
+                <div class="answer">Popular movies include "Hocus Pocus" and "The Nightmare Before Christmas".</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(14)">
+                15. How is Halloween celebrated in different countries?
+                <div class="answer">In Mexico, people celebrate Día de los Muertos, while in the U.S., people go trick-or-treating.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(15)">
+                16. Why are witches a common Halloween symbol?
+                <div class="answer">Witches are symbols of magic and mystery, making them popular during Halloween.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(16)">
+                17. Why do people tell scary stories on Halloween?
+                <div class="answer">Telling scary stories is a way to celebrate the spooky atmosphere of Halloween.</div>
+            </div>
+
+            <div class="question" onclick="toggleAnswer(17)">
+                18. How has Halloween changed over time?
+                <div class="answer">Halloween has evolved from a spiritual holiday to a more commercial celebration.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(index) {
+            const answers = document.querySelectorAll('.answer');
+            answers[index].classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>
